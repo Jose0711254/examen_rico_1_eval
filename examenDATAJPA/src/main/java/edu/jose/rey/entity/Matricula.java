@@ -69,4 +69,8 @@ public class Matricula {
         this.codigos = codigos;
     }
 
+    public String getFecha() {
+        throw new UnsupportedOperationException("No se emplea la fecha");
+    }
+
 }

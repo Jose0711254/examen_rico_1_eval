@@ -1,10 +1,13 @@
 package edu.jose.rey.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -25,6 +28,9 @@ public class Asignatura {
 
     @Column(name = "codigo", nullable = false, unique = true)
     private String codigo;
+
+    @ManyToMany(mappedBy = "asignaturas")
+    private List<Estudiante> estudiantes;
 
     public Asignatura() {
     }
